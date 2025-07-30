@@ -1,0 +1,615 @@
+	  
+#cover {
+  height: 10rem;
+  width: 31rem;
+  border-radius: 50%;
+  background: #6a5c7f;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 7rem;
+  z-index: -3;
+  animation: backgroundChange 4s linear infinite alternate;
+  animation-play-state: inherit;
+}
+#clothes {
+  top: 15rem;
+  width: 12rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 8rem solid #1a2a44;
+  border-left: 5rem solid transparent;
+  border-right: 5rem solid transparent;
+  z-index: -4;
+  animation: clothesChange 4s linear infinite alternate;
+  animation-play-state: inherit;
+}
+body {
+  background: #6a5c7f;
+  animation: backgroundChange 4s linear infinite alternate;
+  animation-play-state: inherit;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+#vampire {
+  position: relative;
+  height: 23rem;
+  width: 16rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: calc(50vh - 11.5rem);
+}
+/*#vampire:hover {
+  animation-play-state: paused;
+}*/
+#hair {
+  height: 13rem;
+  width: 16rem;
+  background: #212127;
+  border-radius: 42% 48% 0 0/56% 60% 0 0;
+}
+#vampire div {
+  position: absolute;
+}
+#main {
+  top: 1rem;
+  height: 22rem;
+  width: 16rem;
+  background: linear-gradient(to bottom, #212127 50%, #eceed9 50%);
+  border-radius: 10rem 10rem 15rem 15rem/10rem 10rem 18rem 18rem;
+  border-radius: 15rem 16rem 15rem 15rem/24rem 24rem 18rem 18rem;
+  overflow: hidden;
+  animation: faceChange 4s linear infinite alternate;
+  animation-play-state: inherit;
+}
+.face {
+  height: 14rem;
+  width: 14rem;
+  background: #eceed9;
+  top: 7rem;
+  border-radius: 0 85%;
+  left: -1.3rem;
+  transform: rotate(15deg);
+  animation: skinChange 4s linear infinite alternate;
+  animation-play-state: inherit;
+}
+.face_right {
+  left: auto;
+  right: -1.3rem;
+  transform: rotate(75deg);
+}
+.cheek {
+  background: linear-gradient(to bottom, #cecebf 0%, #eceed9 100%);
+  height: 8rem;
+  width: 7rem;
+  border-radius: 40%;
+  left: -3rem;
+  bottom: 0rem;
+  animation: cheeckSkinChange 4s linear infinite alternate;
+  animation-play-state: inherit;
+}
+.cheek_right {
+  left: auto;
+  right: -3rem;
+}
+#mouth {
+  height: 3rem;
+  width: 6rem;
+  border-radius: 0 0 3rem 3rem;
+  background: #ed2629;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+.top_teeth {
+  left: 0.4rem;
+  border-top: 1.2rem solid #fff;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  animation: topTeethChange 4s linear infinite alternate;
+  animation-play-state: inherit;
+}
+.teeth_right {
+  left: auto;
+  right: 0.4rem;
+}
+.rectanlge {
+  height: 0.5rem;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+}
+.bottom_teeth {
+  bottom: 0rem;
+  left: 1rem;
+  border-bottom: 1.2rem solid #fff;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  animation: bottomTeethChange 4s linear infinite alternate;
+  animation-play-state: inherit;
+}
+.bottom_teeth_right {
+  left: auto;
+  right: 1rem;
+}
+#nose {
+  height: 1rem;
+  width: 2rem;
+  border-radius: 0 0 1rem 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15rem;
+  background: linear-gradient(to bottom, #cecebf 0%, #eceed9 100%);
+  animation: noseSkinChange 4s linear infinite alternate;
+  animation-play-state: inherit;
+}
+.eye_border {
+  height: 3rem;
+  width: 6rem;
+  border-radius: 0 0 3rem 3rem;
+  background: linear-gradient(to bottom, #cecebf 0%, #eceed9 100%);
+  top: 10rem;
+  left: 0.5rem;
+  transform: rotate(22deg);
+  animation: cheeckSkinChange 4s linear infinite alternate;
+  animation-play-state: inherit;
+}
+.eye {
+  height: 1.6rem;
+  width: 3.2rem;
+  border-radius: 0 0 1.6rem 1.6rem;
+  background: #ed2528;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: -0.2rem 0.1rem 0 0.1rem #000;
+  animation: eyeChange 4s linear infinite alternate;
+  animation-play-state: inherit;
+}
+.eyebrow {
+  border-bottom: 1.2rem solid #221d21;
+  border-left: 1rem solid transparent;
+  border-right: 5rem solid transparent;
+  top: -1.2rem;
+}
+.eye_border_right {
+  left: auto;
+  right: 0.5rem;
+  transform: rotate(-22deg);
+}
+.eye_right {
+  box-shadow: 0.2rem 0.1rem 0 0.1rem #000;
+  transform: translateX(-50%) rotateY(180deg);
+}
+.eyebrow_right {
+  border-left: 5rem solid transparent;
+  border-right: 1rem solid transparent;
+}
+.ear {
+  height: 6rem;
+  width: 6rem;
+  background: #eceed9;
+  border-radius: 0 100%;
+  top: 10rem;
+  left: -3rem;
+  transform: rotate(15deg);
+  z-index: -2;
+  animation: earChange 4s linear infinite alternate;
+  animation-play-state: inherit;
+}
+.ear_right {
+  left: auto;
+  right: -3rem;
+  transform: rotate(75deg);
+}
+
+
+/******without in stylus*********/
+#links{
+  bottom: -6rem;
+  width: 100%;  
+  display: flex;
+  justify-content: space-around;
+}
+
+.link{
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #9d1d1d;
+}
+/*************************************/
+@-moz-keyframes backgroundChange {
+  0% {
+    background: #6a5c7f;
+  }
+  100% {
+    background: #fff;
+  }
+}
+@-webkit-keyframes backgroundChange {
+  0% {
+    background: #6a5c7f;
+  }
+  100% {
+    background: #fff;
+  }
+}
+@-o-keyframes backgroundChange {
+  0% {
+    background: #6a5c7f;
+  }
+  100% {
+    background: #fff;
+  }
+}
+@keyframes backgroundChange {
+  0% {
+    background: #6a5c7f;
+  }
+  100% {
+    background: #fff;
+  }
+}
+@-moz-keyframes eyeChange {
+  0% {
+    height: 1.6rem;
+    width: 3.2rem;
+    border-radius: 0 0 1.6rem 1.6rem;
+    background: #ed2528;
+    box-shadow: -0.2rem 0.1rem 0 0.1rem #000;
+  }
+  100% {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: #000;
+    box-shadow: 0 0 0 0.4rem #fff;
+  }
+}
+@-webkit-keyframes eyeChange {
+  0% {
+    height: 1.6rem;
+    width: 3.2rem;
+    border-radius: 0 0 1.6rem 1.6rem;
+    background: #ed2528;
+    box-shadow: -0.2rem 0.1rem 0 0.1rem #000;
+  }
+  100% {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: #000;
+    box-shadow: 0 0 0 0.4rem #fff;
+  }
+}
+@-o-keyframes eyeChange {
+  0% {
+    height: 1.6rem;
+    width: 3.2rem;
+    border-radius: 0 0 1.6rem 1.6rem;
+    background: #ed2528;
+    box-shadow: -0.2rem 0.1rem 0 0.1rem #000;
+  }
+  100% {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: #000;
+    box-shadow: 0 0 0 0.4rem #fff;
+  }
+}
+@keyframes eyeChange {
+  0% {
+    height: 1.6rem;
+    width: 3.2rem;
+    border-radius: 0 0 1.6rem 1.6rem;
+    background: #ed2528;
+    box-shadow: -0.2rem 0.1rem 0 0.1rem #000;
+  }
+  100% {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: #000;
+    box-shadow: 0 0 0 0.4rem #fff;
+  }
+}
+@-moz-keyframes skinChange {
+  0% {
+    background: #eceed9;
+  }
+  100% {
+    background: #fdbf86;
+  }
+}
+@-webkit-keyframes skinChange {
+  0% {
+    background: #eceed9;
+  }
+  100% {
+    background: #fdbf86;
+  }
+}
+@-o-keyframes skinChange {
+  0% {
+    background: #eceed9;
+  }
+  100% {
+    background: #fdbf86;
+  }
+}
+@keyframes skinChange {
+  0% {
+    background: #eceed9;
+  }
+  100% {
+    background: #fdbf86;
+  }
+}
+@-moz-keyframes cheeckSkinChange {
+  0% {
+    background: linear-gradient(to bottom, #cecebf 0%, #eceed9 100%);
+  }
+  100% {
+    background: #fdbf86;
+  }
+}
+@-webkit-keyframes cheeckSkinChange {
+  0% {
+    background: linear-gradient(to bottom, #cecebf 0%, #eceed9 100%);
+  }
+  100% {
+    background: #fdbf86;
+  }
+}
+@-o-keyframes cheeckSkinChange {
+  0% {
+    background: linear-gradient(to bottom, #cecebf 0%, #eceed9 100%);
+  }
+  100% {
+    background: #fdbf86;
+  }
+}
+@keyframes cheeckSkinChange {
+  0% {
+    background: linear-gradient(to bottom, #cecebf 0%, #eceed9 100%);
+  }
+  100% {
+    background: #fdbf86;
+  }
+}
+@-moz-keyframes noseSkinChange {
+  0% {
+    background: linear-gradient(to bottom, #cecebf 0%, #eceed9 100%);
+  }
+  100% {
+    background: #ca9870;
+  }
+}
+@-webkit-keyframes noseSkinChange {
+  0% {
+    background: linear-gradient(to bottom, #cecebf 0%, #eceed9 100%);
+  }
+  100% {
+    background: #ca9870;
+  }
+}
+@-o-keyframes noseSkinChange {
+  0% {
+    background: linear-gradient(to bottom, #cecebf 0%, #eceed9 100%);
+  }
+  100% {
+    background: #ca9870;
+  }
+}
+@keyframes noseSkinChange {
+  0% {
+    background: linear-gradient(to bottom, #cecebf 0%, #eceed9 100%);
+  }
+  100% {
+    background: #ca9870;
+  }
+}
+@-moz-keyframes earChange {
+  0% {
+    background: linear-gradient(to bottom, #cecebf 0%, #eceed9 100%);
+    border-radius: 0 100%;
+  }
+  100% {
+    background: #fdbf86;
+    border-radius: 25% 100%;
+  }
+}
+@-webkit-keyframes earChange {
+  0% {
+    background: linear-gradient(to bottom, #cecebf 0%, #eceed9 100%);
+    border-radius: 0 100%;
+  }
+  100% {
+    background: #fdbf86;
+    border-radius: 25% 100%;
+  }
+}
+@-o-keyframes earChange {
+  0% {
+    background: linear-gradient(to bottom, #cecebf 0%, #eceed9 100%);
+    border-radius: 0 100%;
+  }
+  100% {
+    background: #fdbf86;
+    border-radius: 25% 100%;
+  }
+}
+@keyframes earChange {
+  0% {
+    background: linear-gradient(to bottom, #cecebf 0%, #eceed9 100%);
+    border-radius: 0 100%;
+  }
+  100% {
+    background: #fdbf86;
+    border-radius: 25% 100%;
+  }
+}
+@-moz-keyframes topTeethChange {
+  0% {
+    border-top: 1.2rem solid #fff;
+  }
+  100% {
+    border-top: 0.5rem solid #fff;
+  }
+}
+@-webkit-keyframes topTeethChange {
+  0% {
+    border-top: 1.2rem solid #fff;
+  }
+  100% {
+    border-top: 0.5rem solid #fff;
+  }
+}
+@-o-keyframes topTeethChange {
+  0% {
+    border-top: 1.2rem solid #fff;
+  }
+  100% {
+    border-top: 0.5rem solid #fff;
+  }
+}
+@keyframes topTeethChange {
+  0% {
+    border-top: 1.2rem solid #fff;
+  }
+  100% {
+    border-top: 0.5rem solid #fff;
+  }
+}
+@-moz-keyframes bottomTeethChange {
+  0% {
+    border-bottom: 1.2rem solid #fff;
+    width: 0rem;
+  }
+  100% {
+    border-bottom: 0.7rem solid #fff;
+    width: 2rem;
+  }
+}
+@-webkit-keyframes bottomTeethChange {
+  0% {
+    border-bottom: 1.2rem solid #fff;
+    width: 0rem;
+  }
+  100% {
+    border-bottom: 0.7rem solid #fff;
+    width: 2rem;
+  }
+}
+@-o-keyframes bottomTeethChange {
+  0% {
+    border-bottom: 1.2rem solid #fff;
+    width: 0rem;
+  }
+  100% {
+    border-bottom: 0.7rem solid #fff;
+    width: 2rem;
+  }
+}
+@keyframes bottomTeethChange {
+  0% {
+    border-bottom: 1.2rem solid #fff;
+    width: 0rem;
+  }
+  100% {
+    border-bottom: 0.7rem solid #fff;
+    width: 2rem;
+  }
+}
+@-moz-keyframes faceChange {
+  0% {
+    background: linear-gradient(to bottom, #212127 50%, #eceed9 50%);
+  }
+  100% {
+    background: linear-gradient(to bottom, #212127 50%, #fdbf86 50%);
+  }
+}
+@-webkit-keyframes faceChange {
+  0% {
+    background: linear-gradient(to bottom, #212127 50%, #eceed9 50%);
+  }
+  100% {
+    background: linear-gradient(to bottom, #212127 50%, #fdbf86 50%);
+  }
+}
+@-o-keyframes faceChange {
+  0% {
+    background: linear-gradient(to bottom, #212127 50%, #eceed9 50%);
+  }
+  100% {
+    background: linear-gradient(to bottom, #212127 50%, #fdbf86 50%);
+  }
+}
+@keyframes faceChange {
+  0% {
+    background: linear-gradient(to bottom, #212127 50%, #eceed9 50%);
+  }
+  100% {
+    background: linear-gradient(to bottom, #212127 50%, #fdbf86 50%);
+  }
+}
+@-moz-keyframes clothesChange {
+  0% {
+    border-top: 8rem solid #1a2a44;
+    border-left: 5rem solid transparent;
+    border-right: 5rem solid transparent;
+    border-bottom: none;
+  }
+  100% {
+    border-top: none;
+    border-bottom: 8rem solid #1a2a44;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+  }
+}
+@-webkit-keyframes clothesChange {
+  0% {
+    border-top: 8rem solid #1a2a44;
+    border-left: 5rem solid transparent;
+    border-right: 5rem solid transparent;
+    border-bottom: none;
+  }
+  100% {
+    border-top: none;
+    border-bottom: 8rem solid #1a2a44;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+  }
+}
+@-o-keyframes clothesChange {
+  0% {
+    border-top: 8rem solid #1a2a44;
+    border-left: 5rem solid transparent;
+    border-right: 5rem solid transparent;
+    border-bottom: none;
+  }
+  100% {
+    border-top: none;
+    border-bottom: 8rem solid #1a2a44;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+  }
+}
+@keyframes clothesChange {
+  0% {
+    border-top: 8rem solid #1a2a44;
+    border-left: 5rem solid transparent;
+    border-right: 5rem solid transparent;
+    border-bottom: none;
+  }
+  100% {
+    border-top: none;
+    border-bottom: 8rem solid #1a2a44;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+  }
+}

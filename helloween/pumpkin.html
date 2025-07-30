@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>pumpkin</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background: #ac6060;
+    }
+
+    #form {
+      padding: 10px;
+      position: absolute;
+      background: white;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 10px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      font-size: 12px;
+    }
+
+    #form>label {
+      display: flex;
+      align-items: center;
+    }
+
+    #pumpkin {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 200px;
+      width: 255px;
+    }
+
+    #stem {
+      position: absolute;
+      top: -2.87rem;
+      left: 9rem;
+      height: 5rem;
+      width: 5rem;
+      background: transparent;
+      border-radius: 50%;
+      box-shadow: -2rem 0rem 0 0 green, -2.5rem 0rem 0 0 #2f6802;
+    }
+
+    #stem_layer2 {
+      position: absolute;
+      top: -0.5rem;
+      height: 3rem;
+      width: 5rem;
+      background: transparent;
+      border-radius: 50%;
+      box-shadow: -3.5rem 0rem 0 0 green, -4.5rem 0rem 0 0 #2f6802;
+      transform: rotate(-31deg);
+    }
+
+    #pumpkin_layer1 {
+      position: absolute;
+      top: 0;
+      height: inherit;
+      width: inherit;
+      overflow: hidden;
+      border-radius: 45% 45% 56% 56%/ 55% 55% 68% 68%;
+      background: #ffba03;
+    }
+
+    #hat {
+      position: absolute;
+      top: -3.5rem;
+    }
+
+    #hat_layer1 {
+      border-top: 0px solid transparent;
+      border-left: 1rem solid transparent;
+      border-right: 2.5rem solid transparent;
+      border-bottom: 7.5rem solid #323232;
+      background: transparent;
+      height: 5rem;
+      width: 0rem;
+      position: absolute;
+      top: -10.5rem;
+      left: 11.8rem;
+      transform: rotate(52deg);
+    }
+
+    #hat_layer2 {
+      position: absolute;
+      background: #323232;
+      height: 3rem;
+      width: 15rem;
+      left: 1rem;
+      top: 2.5rem;
+      z-index: 2;
+      border-radius: 80% 79% 88% 88%/58% 80% 93% 107%;
+      transform: rotate(4deg) skewX(-36deg);
+    }
+
+    #hat_layer3 {
+      border-top: 0px solid transparent;
+      border-left: 1rem solid transparent;
+      border-right: 1rem solid transparent;
+      border-bottom: 5.5rem solid #323232;
+      position: absolute;
+      width: 3.7rem;
+      top: -1.5rem;
+      left: 6rem;
+      z-index: 2;
+      transform: rotate(10deg);
+    }
+
+    #hat_ribbon {
+      border-top: 0px solid transparent;
+      border-left: 0.2rem solid transparent;
+      border-right: 0.2rem solid transparent;
+      border-bottom: 1rem solid #ffef66;
+      width: 4.9rem;
+      position: absolute;
+      top: 3.5rem;
+      left: -0.8rem;
+    }
+
+    .middle {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #pumpkin_layer2 {
+      position: absolute;
+      border-radius: 50%;
+      height: 17rem;
+      top: -1rem;
+      width: 13rem;
+      background: #ffaa01;
+      box-shadow: 0 0 0 3px #f08c00;
+    }
+
+    #pumpkin_layer3 {
+      position: absolute;
+      border-radius: 50%;
+      height: 200px;
+      width: 4rem;
+      background: #ffba03;
+      box-shadow: 0 0 0 3px #f08c00;
+    }
+
+    .eye_yellow {
+      border-top: 0px solid transparent;
+      border-left: 40px solid transparent;
+      border-right: 0px solid transparent;
+      border-bottom: 25px solid #ffef66;
+      position: absolute;
+      top: -20px;
+      left: -8px;
+    }
+
+    .eye {
+      border-top: 25px solid transparent;
+      border-left: 20px solid transparent;
+      border-right: 40px solid #c8841e;
+      border-bottom: 12px solid #c8841e;
+      position: absolute;
+      top: 20%;
+      right: 15%;
+      transform: skew(-7deg);
+    }
+
+    .left {
+      transform: skew(7deg) rotateY(180deg);
+      right: 60%;
+    }
+
+    #mouth {
+      position: absolute;
+      height: 30rem;
+      width: 29rem;
+      background: transparent;
+      border-radius: 50%;
+      box-shadow: 0 13.5rem 0 -9rem #ffef66, 0.1rem 13rem 0 -8rem #c8841e;
+      top: -21.5rem;
+    }
+
+    .teeth {
+      position: absolute;
+      height: 2rem;
+      width: 1.5rem;
+    }
+
+    .top_teeth {
+      position: absolute;
+      background: #ffaa01;
+      left: 11.3rem;
+      top: 7.6rem;
+      box-shadow: 0.5rem 0.2rem 0 -0.2rem #c8841e;
+    }
+
+    .bottom_teeth {
+      position: absolute;
+      background: #ffaa01;
+      left: 5rem;
+      top: 10.8rem;
+      box-shadow: 0.3rem -0.3rem 0 0 #c8841e;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="form">
+    <label class="switch">
+      <input type="checkbox" checked>顯示南瓜帽
+    </label>
+  </div>
+
+  <div id="pumpkin">
+
+    <div id="stem">
+      <div id="stem_layer2"></div>
+    </div>
+
+    <div id="hat">
+      <div id="hat_layer1"></div>
+      <div id="hat_layer2"></div>
+      <div id="hat_layer3">
+        <div id="hat_ribbon"></div>
+      </div>
+    </div>
+
+    <div id="pumpkin_layer1">
+      <div id="pumpkin_layer2" class="middle"></div>
+      <div id="pumpkin_layer3" class="middle"></div>
+
+      <div class="eye left">
+        <div class="eye_yellow"></div>
+      </div>
+
+      <div class="eye">
+        <div class="eye_yellow"></div>
+      </div>
+
+      <div id="mouth" class="middle"></div>
+
+      <div class="teeth top_teeth"></div>
+      <div class="teeth bottom_teeth"></div>
+    </div>
+  </div>
+  <script>
+    const form = document.querySelector('#form');
+    const hat = document.querySelector('#hat');
+
+    form.addEventListener('change', (e) => {
+      if (e.target.checked) {
+        hat.style.display = 'block';
+      } else {
+        hat.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+
+</html>
