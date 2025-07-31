@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>CSS Drawing</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			font-family: 'Inter', sans-serif;
+			background: linear-gradient(135deg, #f5f5f5, #ffffff);
+			padding: 40px 20px;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		h1 {
+			font-size: 2.5rem;
+			font-weight: 600;
+			color: #222;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			font-weight: 600;
+			margin: 40px 0 20px;
+			color: #333;
+			text-align: left;
+			width: 100%;
+			max-width: 960px;
+		}
+
+		.section-image {
+			width: 100%;
+			max-width: 960px;
+			height: auto;
+			border-radius: 12px;
+			margin-bottom: 24px;
+			object-fit: cover;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+		}
+
+		.link-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+			gap: 24px;
+			width: 100%;
+			max-width: 960px;
+		}
+
+		.link-card {
+			background: white;
+			border-radius: 16px;
+			padding: 20px 24px;
+			text-decoration: none;
+			color: #222;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+			transition: box-shadow 0.2s ease, transform 0.2s ease;
+			border: 1px solid #eaeaea;
+			position: relative;
+		}
+
+		.link-card:hover {
+			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+			transform: translateY(-4px);
+		}
+
+		.link-title {
+			font-size: 1.1rem;
+			font-weight: 600;
+		}
+
+		.link-card::after {
+			content: '→';
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			font-size: 1.2rem;
+			color: #999;
+			transition: transform 0.2s ease;
+		}
+
+		.link-card:hover::after {
+			transform: translateX(4px);
+			color: #555;
+		}
+
+		@media (max-width: 600px) {
+			h1 {
+				font-size: 2rem;
+			}
+
+			h2 {
+				font-size: 1.25rem;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<h1>CSS Drawing</h1>
+
+	<h2>Moon Festival</h2>
+	<img src="./moon-festival/og-image.jpg" alt="og-image" class="section-image" />
+	<div class="link-grid">
+		<a href="./moon-festival/index.html" class="link-card">
+			<div class="link-title">Moon Festival</div>
+		</a>
+		<a href="./moon-festival/rabbit.html" class="link-card">
+			<div class="link-title">Rabbit</div>
+		</a>
+		<a href="./moon-festival/rocket1-rem.html" class="link-card">
+			<div class="link-title">Rocket v1 (rem)</div>
+		</a>
+		<a href="./moon-festival/rocket1.html" class="link-card">
+			<div class="link-title">Rocket v1</div>
+		</a>
+		<a href="./moon-festival/rocket2.html" class="link-card">
+			<div class="link-title">Rocket v2</div>
+		</a>
+	</div>
+
+	<h2>Man & Vampire</h2>
+	<img src="./man-vampire/og-image.jpg" alt="og-image" class="section-image" />
+	<div class="link-grid">
+		<a href="./man-vampire/index.html" class="link-card">
+			<div class="link-title">Man & Vampire</div>
+		</a>
+		<a href="./man-vampire/man/man.html" class="link-card">
+			<div class="link-title">Man</div>
+		</a>
+		<a href="./man-vampire/vampire/vampire.html" class="link-card">
+			<div class="link-title">Vampire</div>
+		</a>
+	</div>
+
+	<h2>Pumpkin</h2>
+	<img src="./pumpkin/og-image.jpg" alt="og-image" class="section-image" />
+	<div class="link-grid">
+		<a href="./pumpkin/pumpkin.html" class="link-card">
+			<div class="link-title">Pumpkin</div>
+		</a>
+	</div>
+</body>
+
+</html>
